@@ -190,7 +190,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../images/about/welcome-banner.jpg)no-repeat;
+    background-image: linear-gradient(135deg, rgba(31,44,108,.95) 0%, rgba(217,44,249,.85) 100%);
+    background-repeat:no-repeat;
     background-size:cover;
     background-position: center;
     height:890px;
@@ -271,7 +272,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.single-about-txt*/
 
 /*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
+.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);overflow:hidden;border-radius:6px;}
 .single-about-img:before {
     position:  absolute;
     content: " ";
@@ -280,10 +281,27 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     width: 109%;
     height:  100%;
     background: rgba(31,44,108,.3);
+    z-index: 0;
 }
 .single-about-img img {
     max-width: 500px;
     height: 468px;
+    position: relative;
+    z-index: 1;
+}
+.single-about-img .profile-avatar{
+    width: 500px;
+    height: 468px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 88px;
+    font-weight: 800;
+    color: #fff;
+    background: radial-gradient(circle at top, rgba(217,44,249,.35), rgba(31,44,108,.85));
+    text-transform: uppercase;
 }
 .about-list-icon{
     display: flex;
@@ -295,6 +313,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     width: 109%;
     height: 90px;
     background: #1f2c6c;
+    z-index: 2;
 }
 /*.ab-list-icon */
 .about-list-icon ul {
