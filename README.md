@@ -1,40 +1,33 @@
 # Narendar's Portfolio
 
-A professional portfolio website showcasing DevOps engineering skills, experience, and projects.
+A polished, recruiter-friendly single-page portfolio for a DevOps and SRE engineer.
 
-## Features
+## What’s included
 
-- Responsive design using Bootstrap
-- Smooth scrolling navigation
-- Skills progress bars
-- Project portfolio with links to GitHub
-- Contact form
-- SEO optimized
+- Minimal static website with no build step
+- Responsive dark-theme layout with modern glassmorphism styling
+- Clear sections for about, skills, experience, selected focus areas, and contact
+- Direct contact actions with email, LinkedIn, and resume download
+- A bottom contact section with a simple message form
 
-## Technologies Used
+## Project files
 
-- HTML5
-- CSS3 (Bootstrap, custom styles)
-- JavaScript (jQuery)
-- Font Awesome icons
+- `index.html` — main page structure and content
+- `assets/css/style.css` — visual design and responsive styling
+- `assets/resume.pdf` — downloadable resume file
 
-## Setup
+## How to view locally
 
-1. Clone the repository
-2. Open `index.html` in a web browser
-3. For development, use a local server to avoid CORS issues
+1. Clone or open the repository folder
+2. Open `index.html` in a browser, or serve the folder with a simple local server
+3. Replace `assets/resume.pdf` with your latest resume when ready
 
 ## Customization
 
-- Update personal information in `index.html`
-- Replace placeholder images in `assets/images/`
-- Modify styles in `assets/css/style.css`
-- Add Google Analytics tracking ID
+- Update your bio, experience, and contact details in `index.html`
+- Adjust colors, spacing, and layout in `assets/css/style.css`
+- Change the email, LinkedIn link, and phone number in the relevant sections
 
 ## Deployment
 
-Host on GitHub Pages, Netlify, or any static site host.
-
-## License
-
-This project is open source. Feel free to use as a template.
+Host it on GitHub Pages, Netlify, Vercel, or any other static hosting platform.
