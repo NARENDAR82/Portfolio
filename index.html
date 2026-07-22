@@ -40,7 +40,7 @@
               <a class="btn btn-secondary" href="assets/resume.pdf" download>Download resume</a>
             </div>
             <div class="hero-meta">
-              <span>5+ years</span>
+              <span>10+ years</span>
               <span>Azure & Kubernetes</span>
               <span>Terraform & CI/CD</span>
             </div>
@@ -112,6 +112,11 @@
             <span>Linux</span>
             <span>CI/CD</span>
             <span>SRE Practices</span>
+            <span>Infrastructure as Code</span>
+            <span>Monitoring & Alerting</span>
+            <span>Incident Response</span>
+            <span>System Reliability</span>
+            <span>Cloud Security</span>
           </div>
         </div>
       </section>
@@ -199,13 +204,13 @@
           <p class="section-label">Contact</p>
           <h2>Let’s build something dependable.</h2>
           <div class="contact-body">
-            <form class="contact-form" action="mailto:anugunarendarreddy2@gmail.com" method="GET" encType="text/plain">
+            <form id="contactForm" class="contact-form">
               <div class="form-row">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" id="contactName" name="name" placeholder="Name" required>
+                <input type="email" id="contactEmail" name="email" placeholder="Email" required>
               </div>
-              <input type="text" name="subject" placeholder="Subject">
-              <textarea name="message" rows="5" placeholder="Message"></textarea>
+              <input type="text" id="contactSubject" name="subject" placeholder="Subject">
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Message"></textarea>
               <button type="submit" class="btn btn-primary">Send message</button>
             </form>
             <div class="contact-details">
@@ -239,6 +244,19 @@
         });
         nav.querySelectorAll('a').forEach((link) => {
           link.addEventListener('click', () => document.body.classList.remove('nav-open'));
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const name = document.getElementById('contactName').value.trim();
+          const email = document.getElementById('contactEmail').value.trim();
+          const subject = document.getElementById('contactSubject').value.trim() || 'Portfolio inquiry';
+          const message = document.getElementById('contactMessage').value.trim();
+          const mailtoLink = `mailto:anugunarendarreddy2@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+          window.location.href = mailtoLink;
         });
       }
     </script>
